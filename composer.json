@@ -1,0 +1,13 @@
+{
+  "name": "soura/quiz-app-cse5-bu",
+  "autoload": {
+    "psr-4": {
+      "config\\": "config/",
+      "controllers\\": "controllers/",
+      "models\\": "models/"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.5"
+  }
+}
