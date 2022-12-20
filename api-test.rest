@@ -9,9 +9,23 @@ Content-Type: {{contentType}} boundary=----register
 Content-Disposition: form-data; name="phone"
 
 +8801943253440
-
 ------register
 Content-Disposition: form-data; name="password"
 
 12345678
 ------register--
+
+### Login
+
+POST {{$dotenv ROOT_DIR}}/api/login.php 
+Content-Type: {{contentType}} boundary=----login
+
+------login
+Content-Disposition: form-data; name="phone"
+
++8801943253440
+------login
+Content-Disposition: form-data; name="password"
+
+12345678
+------login--

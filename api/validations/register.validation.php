@@ -4,8 +4,8 @@
   $validator = new Validator();
 
   $validation = $validator->make($_POST, [
-    'phone' => 'required|regex:/^\+8801[3-9]{1}[0-9]{9}$/',
-    'password' => 'required|min:8|max:20|regex:/^[a-zA-Z0-9]$/'
+    'phone' => 'required|regex:/^\+8801[3-9]{1}[0-9]{8}$/',
+    'password' => 'required|min:8|max:20|regex:/^[a-zA-Z0-9]{8,20}$/'
   ]);
   
   $validation->setMessages([
