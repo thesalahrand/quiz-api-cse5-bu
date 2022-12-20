@@ -1,0 +1,17 @@
+@contentType = multipart/form-data;
+
+### Register
+
+POST {{$dotenv ROOT_DIR}}/api/register.php 
+Content-Type: {{contentType}} boundary=----register
+
+------register
+Content-Disposition: form-data; name="phone"
+
++8801943253440
+
+------register
+Content-Disposition: form-data; name="password"
+
+12345678
+------register--
