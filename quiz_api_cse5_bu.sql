@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2022 at 07:16 AM
+-- Generation Time: Dec 21, 2022 at 10:44 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -93,6 +93,18 @@ CREATE TABLE `topics` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `topics`
+--
+
+INSERT INTO `topics` (`id`, `title`, `topicPic`, `categoryId`, `createdAt`, `updatedAt`) VALUES
+(8, 'Artificial Intelligence', 'uploads/topics/artificial-intelligence-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
+(9, 'Computer Architecture', 'uploads/topics/computer-architecture-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
+(10, 'C Programming Language', 'uploads/topics/c-programming-language-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
+(11, 'Machine Learning', 'uploads/topics/machine-learning-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
+(12, 'Peripheral and Interfacing', 'uploads/topics/peripheral-and-interfacing-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
+(13, 'Theory of Computation', 'uploads/topics/theory-of-computation-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32');
 
 -- --------------------------------------------------------
 
@@ -184,7 +196,7 @@ ALTER TABLE `scores`
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
