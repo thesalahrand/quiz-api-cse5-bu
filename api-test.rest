@@ -36,3 +36,10 @@ POST {{$dotenv ROOT_DIR}}/api/is-logged-in.php
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
 Content-Type: {{contentType}} boundary=----is-logged-in
 ------is-logged-in--
+
+### Read Categories
+
+POST {{$dotenv ROOT_DIR}}/api/read-categories.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Content-Type: {{contentType}} boundary=----read-categories
+------read-categories--

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2022 at 07:55 AM
+-- Generation Time: Dec 21, 2022 at 07:16 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `quiz_app_cse5_bu`
+-- Database: `quiz_api_cse5_bu`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +34,20 @@ CREATE TABLE `categories` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`, `categoryPic`, `createdAt`, `updatedAt`) VALUES
+(1, 'CSE', 'uploads/categories/cse.png', '2022-12-21 05:53:36', '2022-12-21 05:53:36'),
+(2, 'Math', 'uploads/categories/math.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(3, 'Biology', 'uploads/categories/biology.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(4, 'GK', 'uploads/categories/gk.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(5, 'Literature', 'uploads/categories/literature.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(6, 'History', 'uploads/categories/history.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(7, 'Physics', 'uploads/categories/physics.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
+(8, 'Chemistry', 'uploads/categories/chemistry.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44');
 
 -- --------------------------------------------------------
 
@@ -98,6 +112,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `phone`, `password`, `profilePic`, `createdAt`, `updatedAt`) VALUES
+(12, NULL, NULL, '+8801943253440', '$2y$10$B3CGvVfoOR6gVNyKV3oxE.4RsHzbbWek1I092LtfxyCwQncRsWcq.', NULL, '2022-12-21 05:41:45', '2022-12-21 05:41:45');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -145,7 +166,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `quiz`
@@ -169,7 +190,7 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
