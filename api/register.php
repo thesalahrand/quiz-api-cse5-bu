@@ -8,28 +8,22 @@
   $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
   $dotenv->safeLoad();
 
+  use \config\Config;
   use \config\Database;
   use \models\Users;
+
+  $config = new Config();
 
   $database = new Database();
   $db = $database->connect();
 
   $users = new Users($db);
 
-  if($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(503);
-    echo json_encode(['message' => 'Access denied']);
-    exit();
-  }
+  require __DIR__ . '/validations/register.validation.php';
 
-  $_POST = array_map('trim', $_POST);
-  
-  $users->phone = $_POST['phone'];
   $users->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
   $users->createdAt = date('Y-m-d H:i:s', time());
   $users->updatedAt = date('Y-m-d H:i:s', time());
-
-  require __DIR__ . '/validations/register.validation.php';
 
   if(!$users->create()) {
     http_response_code(500);

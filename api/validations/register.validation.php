@@ -1,8 +1,15 @@
 <?php
+  if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(503);
+    echo json_encode(['message' => 'Access denied']);
+    exit();
+  }
+
   use Rakit\Validation\Validator;
 
-  $validator = new Validator();
+  $_POST = array_map('trim', $_POST);
 
+  $validator = new Validator();
 
   $validation = $validator->make($_POST, [
     'phone' => 'required|regex:/^\+8801[3-9]{1}[0-9]{8}$/',
@@ -25,6 +32,8 @@
     echo json_encode(['message' => $validation->errors()->firstOfAll()[array_key_first($validation->errors()->firstOfAll())]]);
     exit();
   }
+
+  $users->phone = $_POST['phone'];
 
   if($users->readByPhone()->rowCount()) {
     http_response_code(500);

@@ -11,8 +11,6 @@
   use \config\Config;
   use \config\Database;
   use \models\Users;
-  use Firebase\JWT\JWT;
-  use Firebase\JWT\Key;
 
   $config = new Config();
 
@@ -21,13 +19,8 @@
 
   $users = new Users($db);
 
-  require __DIR__ . '/validations/login.validation.php';
-
-  $payload = [
-    'id' => $user['id']
-  ];
-  $jwt = JWT::encode($payload, $_ENV['JWT_SECRET_KEY'], 'HS256');
+  require __DIR__ . '/validations/is-logged-in.validation.php';
 
   http_response_code(200);
-  echo json_encode(['jwt' => $jwt]);
+  echo json_encode(['id' => $users->id]);
 ?>
