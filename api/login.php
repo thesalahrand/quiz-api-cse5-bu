@@ -24,10 +24,12 @@
     exit();
   }
 
-  require __DIR__ . '/validations/login.validation.php';
-
+  $_POST = array_map('trim', $_POST);
+  
   $users->phone = $_POST['phone'];
   $users->password = $_POST['password'];
+
+  require __DIR__ . '/validations/login.validation.php';
 
   if(!$users->readByPhone()->rowCount()) {
     http_response_code(400);

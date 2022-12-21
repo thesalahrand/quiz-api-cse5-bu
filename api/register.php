@@ -22,12 +22,14 @@
     exit();
   }
 
-  require __DIR__ . '/validations/register.validation.php';
-
+  $_POST = array_map('trim', $_POST);
+  
   $users->phone = $_POST['phone'];
   $users->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
   $users->createdAt = date('Y-m-d H:i:s', time());
   $users->updatedAt = date('Y-m-d H:i:s', time());
+
+  require __DIR__ . '/validations/register.validation.php';
 
   if(!$users->create()) {
     http_response_code(500);

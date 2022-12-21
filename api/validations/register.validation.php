@@ -3,6 +3,7 @@
 
   $validator = new Validator();
 
+
   $validation = $validator->make($_POST, [
     'phone' => 'required|regex:/^\+8801[3-9]{1}[0-9]{8}$/',
     'password' => 'required|min:8|max:20|regex:/^[a-zA-Z0-9]{8,20}$/'
@@ -22,6 +23,12 @@
   if($validation->fails()) {
     http_response_code(503);
     echo json_encode(['message' => $validation->errors()->firstOfAll()[array_key_first($validation->errors()->firstOfAll())]]);
+    exit();
+  }
+
+  if($users->readByPhone()->rowCount()) {
+    http_response_code(500);
+    echo json_encode(['message' => 'Phone number already used']);
     exit();
   }
 ?>
