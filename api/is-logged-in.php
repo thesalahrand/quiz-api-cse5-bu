@@ -21,6 +21,10 @@
 
   require __DIR__ . '/validations/is-logged-in.validation.php';
 
+  $singleUser = $users->readById()->fetch(PDO::FETCH_ASSOC);
+
+  unset($singleUser['password']);
+
   http_response_code(200);
-  echo json_encode(['id' => $users->id]);
+  echo json_encode($singleUser);
 ?>
