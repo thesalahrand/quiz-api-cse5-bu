@@ -79,3 +79,15 @@ Content-Disposition: form-data; name="id"
 
 8
 ------read-topic-by-id--
+
+### Read Quiz by Topic Id
+
+POST {{$dotenv ROOT_DIR}}/api/read-quiz-by-topic-id.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Content-Type: {{contentType}} boundary=----read-quiz-by-topic-id
+
+------read-quiz-by-topic-id
+Content-Disposition: form-data; name="topicId"
+
+9
+------read-quiz-by-topic-id--

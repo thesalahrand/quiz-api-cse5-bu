@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2022 at 10:44 AM
+-- Generation Time: Dec 21, 2022 at 02:05 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -64,6 +64,17 @@ CREATE TABLE `quiz` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `lastUpdated` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `quiz`
+--
+
+INSERT INTO `quiz` (`id`, `question`, `options`, `correctOptions`, `topicId`, `createdAt`, `lastUpdated`) VALUES
+(1, 'A technique that was developed to determine whether a machine could or could not demonstrate the artificial intelligence known as the___', '[\"Boolean Algebra\", \"Turing Test\", \"Logarithm\", \"Algorithm\"]', '[\"1\"]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
+(2, 'Which algorithm is used in the Game tree to make decisions of Win/Lose?', '[\"Heuristic Search Algorithm\", \"DFS/BFS algorithm\", \"Greedy Search Algorithm\", \"Min/Max algorithm\"]', '[\"3\"]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
+(3, 'An AI agent perceives and acts upon the environment using___', '[\"Sensors\", \"Perceiver\", \"Actuators\"]', '[\"0\", \"2\"]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
+(4, 'Rational agent always does the right things.', '[\"True\", \"False\"]', '[\"0\"]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
+(5, 'An Algorithm is said as Complete algorithm if_______________', '[\"It ends with a solution (if any exists)\", \"It begins with a solution\", \"It does not end with a solution\", \"It contains a loop\"]', '[\"0\"]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05');
 
 -- --------------------------------------------------------
 
@@ -184,7 +195,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `scores`
