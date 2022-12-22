@@ -128,3 +128,10 @@ Content-Disposition: form-data; name="answers"
   }
 ]
 ------create-score--
+
+### Read Scores
+
+POST {{$dotenv ROOT_DIR}}/api/read-scores.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Content-Type: {{contentType}} boundary=----read-scores
+------read-scores--

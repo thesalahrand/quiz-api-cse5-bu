@@ -15,6 +15,16 @@
       $this->conn = $db;
     }
 
+    public function read() {
+      $query = "SELECT `$this->tableName`.`id`, `$this->tableName`.`questionsCnt`, `$this->tableName`.`correctAnsCnt`, `$this->tableName`.`playedAt`, `users`.`firstName`, `users`.`lastName`, `users`.`profilePic` FROM `$this->tableName`, `users` WHERE `$this->tableName`.`userId` = `users`.`id` ORDER BY (`$this->tableName`.`correctAnsCnt` / `$this->tableName`.`questionsCnt`) DESC";
+
+      $stmt = $this->conn->prepare($query);
+
+      $stmt->execute();
+
+      return $stmt;
+    }
+
     public function readById() {
       $query = "SELECT * FROM `$this->tableName` WHERE `id` = :id;";
 
