@@ -91,3 +91,40 @@ Content-Disposition: form-data; name="topicId"
 
 9
 ------read-quiz-by-topic-id--
+
+### Create Score
+
+POST {{$dotenv ROOT_DIR}}/api/create-score.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Content-Type: {{contentType}} boundary=----create-score
+
+------create-score
+Content-Disposition: form-data; name="topicId"
+
+8
+------create-score
+Content-Disposition: form-data; name="answers"
+
+[
+  {
+    "questionId": 1, 
+    "chosenOptions": ["1"]
+  },
+  {
+    "questionId": 2, 
+    "chosenOptions": ["3"]
+  },
+  {
+    "questionId": 3, 
+    "chosenOptions": ["0", "2"]
+  },
+  {
+    "questionId": 4, 
+    "chosenOptions": ["0"]
+  },
+  {
+    "questionId": 5, 
+    "chosenOptions": ["0"]
+  }
+]
+------create-score--
