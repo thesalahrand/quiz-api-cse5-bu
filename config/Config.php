@@ -14,7 +14,7 @@
       date_default_timezone_set(self::$TIMEZONE);
     }
 
-    public function uploadFile($file) {
+    public static function uploadFile($file) {
       $fileExt = pathinfo($file['name'], PATHINFO_EXTENSION);
       $randFileName = bin2hex(random_bytes(10));
       $uploadFileName = self::$PROFILE_PIC_UPLOAD_DIR . $randFileName . '.' . $fileExt;

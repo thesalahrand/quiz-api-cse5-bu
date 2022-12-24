@@ -8,13 +8,13 @@
   use Firebase\JWT\JWT;
   use Firebase\JWT\Key;
 
-  if(!isset(getallheaders()['authorization'])) {
+  if(!isset(getallheaders()['Authorization'])) {
     http_response_code(400);
     echo json_encode(['message' => 'Missing JWT token']);
     exit();
   }
 
-  $jwt = getallheaders()['authorization'];
+  $jwt = getallheaders()['Authorization'];
 
   try {
     $payload = (array) JWT::decode($jwt, new Key($_ENV['JWT_SECRET_KEY'], 'HS256'));

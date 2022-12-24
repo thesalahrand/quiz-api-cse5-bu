@@ -8,11 +8,11 @@ Content-Type: {{contentType}} boundary=----register
 ------register
 Content-Disposition: form-data; name="phone"
 
-+8801687260070
++8801943253440
 ------register
 Content-Disposition: form-data; name="password"
 
-87654321
+12345678
 ------register--
 
 ### Login
@@ -33,21 +33,21 @@ Content-Disposition: form-data; name="password"
 ### Is Logged In
 
 POST {{$dotenv ROOT_DIR}}/api/is-logged-in.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----is-logged-in
 ------is-logged-in--
 
 ### Read Categories
 
 POST {{$dotenv ROOT_DIR}}/api/read-categories.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-categories
 ------read-categories--
 
 ### Read Category by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-category-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-category-by-id
 
 ------read-category-by-id
@@ -59,7 +59,7 @@ Content-Disposition: form-data; name="id"
 ### Read Topics by Category Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topics-by-category-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-topics-by-category-id
 
 ------read-topics-by-category-id
@@ -71,7 +71,7 @@ Content-Disposition: form-data; name="categoryId"
 ### Read Topic by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topic-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-topic-by-id
 
 ------read-topic-by-id
@@ -83,19 +83,19 @@ Content-Disposition: form-data; name="id"
 ### Read Quiz by Topic Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-quiz-by-topic-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-quiz-by-topic-id
 
 ------read-quiz-by-topic-id
 Content-Disposition: form-data; name="topicId"
 
-9
+8
 ------read-quiz-by-topic-id--
 
 ### Create Score
 
 POST {{$dotenv ROOT_DIR}}/api/create-score.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----create-score
 
 ------create-score
@@ -132,7 +132,7 @@ Content-Disposition: form-data; name="answers"
 ### Read Scores
 
 POST {{$dotenv ROOT_DIR}}/api/read-scores.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-scores
 ------read-scores--
 
