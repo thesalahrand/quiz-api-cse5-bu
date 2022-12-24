@@ -19,7 +19,7 @@
     }
 
     public function read() {
-      $query = "SELECT * FROM `$this->tableName`;";
+      $query = "SELECT * FROM `$this->tableName` ORDER BY `id` DESC;";
 
       $stmt = $this->conn->prepare($query);
 

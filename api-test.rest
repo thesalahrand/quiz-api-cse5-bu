@@ -27,7 +27,7 @@ Content-Disposition: form-data; name="phone"
 ------login
 Content-Disposition: form-data; name="password"
 
-12345678
+87654321
 ------login--
 
 ### Is Logged In
@@ -164,3 +164,10 @@ Content-Type: image/png
 
 < ./1.png
 ------update-user--
+
+### Read Users
+
+POST {{$dotenv ROOT_DIR}}/api/read-users.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----read-users
+------read-users--
