@@ -8,7 +8,7 @@ Content-Type: {{contentType}} boundary=----register
 ------register
 Content-Disposition: form-data; name="phone"
 
-+8801943253440
++8801303458829
 ------register
 Content-Disposition: form-data; name="password"
 
@@ -23,31 +23,31 @@ Content-Type: {{contentType}} boundary=----login
 ------login
 Content-Disposition: form-data; name="phone"
 
-+8801943253440
++8801303458829
 ------login
 Content-Disposition: form-data; name="password"
 
-87654321
+12345678
 ------login--
 
 ### Is Logged In
 
 POST {{$dotenv ROOT_DIR}}/api/is-logged-in.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----is-logged-in
 ------is-logged-in--
 
 ### Read Categories
 
 POST {{$dotenv ROOT_DIR}}/api/read-categories.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-categories
 ------read-categories--
 
 ### Read Category by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-category-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-category-by-id
 
 ------read-category-by-id
@@ -59,7 +59,7 @@ Content-Disposition: form-data; name="id"
 ### Read Topics by Category Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topics-by-category-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-topics-by-category-id
 
 ------read-topics-by-category-id
@@ -71,7 +71,7 @@ Content-Disposition: form-data; name="categoryId"
 ### Read Topic by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topic-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-topic-by-id
 
 ------read-topic-by-id
@@ -83,7 +83,7 @@ Content-Disposition: form-data; name="id"
 ### Read Quiz by Topic Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-quiz-by-topic-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-quiz-by-topic-id
 
 ------read-quiz-by-topic-id
@@ -95,7 +95,7 @@ Content-Disposition: form-data; name="topicId"
 ### Create Score
 
 POST {{$dotenv ROOT_DIR}}/api/create-score.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----create-score
 
 ------create-score
@@ -112,11 +112,11 @@ Content-Disposition: form-data; name="answers"
   },
   {
     "questionId": 2, 
-    "chosenOptions": ["3"]
+    "chosenOptions": ["0"]
   },
   {
     "questionId": 3, 
-    "chosenOptions": ["0", "2"]
+    "chosenOptions": ["1", "2"]
   },
   {
     "questionId": 4, 
@@ -132,20 +132,20 @@ Content-Disposition: form-data; name="answers"
 ### Read Scores
 
 POST {{$dotenv ROOT_DIR}}/api/read-scores.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-scores
 ------read-scores--
 
 ### Update User
 
 POST {{$dotenv ROOT_DIR}}/api/update-user.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----update-user
 
 ------update-user
 Content-Disposition: form-data; name="firstName"
 
-John 
+Alex 
 ------update-user
 Content-Disposition: form-data; name="lastName"
 
@@ -153,7 +153,7 @@ Doe
 ------update-user
 Content-Disposition: form-data; name="phone"
 
-+8801943253440
++8801303458829
 ------update-user
 Content-Disposition: form-data; name="password"
 
@@ -168,14 +168,14 @@ Content-Type: image/png
 ### Read Users
 
 POST {{$dotenv ROOT_DIR}}/api/read-users.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----read-users
 ------read-users--
 
 ### Create Category
 
 POST {{$dotenv ROOT_DIR}}/api/create-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----create-category
 
 ------create-category
@@ -192,13 +192,13 @@ Content-Type: image/png
 ### Update Category
 
 POST {{$dotenv ROOT_DIR}}/api/update-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----update-category
 
 ------update-category
 Content-Disposition: form-data; name="id"
 
-13
+9
 ------update-category
 Content-Disposition: form-data; name="title"
 
@@ -213,11 +213,32 @@ Content-Type: image/png
 ### Delete Category
 
 POST {{$dotenv ROOT_DIR}}/api/delete-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
 Content-Type: {{contentType}} boundary=----delete-category
 
 ------delete-category
 Content-Disposition: form-data; name="id"
 
-13
+9
 ------delete-category--
+
+### Create Topic
+
+POST {{$dotenv ROOT_DIR}}/api/create-topic.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Content-Type: {{contentType}} boundary=----create-topic
+
+------create-topic
+Content-Disposition: form-data; name="title"
+
+Theory of Computation
+------create-topic
+Content-Disposition: form-data; name="categoryId"
+
+1
+------create-topic
+Content-Disposition: form-data; name="topicPic"; filename="theory-of-computation.png"
+Content-Type: image/png
+
+< ./api-test-pic/theory-of-computation.png
+------create-topic--

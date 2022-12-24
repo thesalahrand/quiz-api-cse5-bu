@@ -51,7 +51,7 @@
     }
 
     public function readByTitleCategoryId() {
-      $query = "SELECT * FROM `$this->tableName` WHERE `title` = :title AND `categoryId` = :categoryId;";
+      $query = "SELECT * FROM `$this->tableName` WHERE lower(`title`) = lower(:title) AND `categoryId` = :categoryId;";
 
       $stmt = $this->conn->prepare($query);
 
@@ -78,7 +78,7 @@
     }
 
     public function update() {
-      $query = "UPDATE `$this->tableName` SET `title` = :title, `topicPic` = :topicPic, `categoryId` = :categoryId, `createdAt` = :createdAt, `lastUpdated` = :lastUpdated WHERE `id` = :id;";
+      $query = "UPDATE `$this->tableName` SET `title` = :title, `topicPic` = :topicPic, `categoryId` = :categoryId, `createdAt` = :createdAt, `updatedAt` = :updatedAt WHERE `id` = :id;";
 
       $stmt = $this->conn->prepare($query);
 
@@ -86,7 +86,7 @@
       $stmt->bindParam(':topicPic', $this->topicPic);
       $stmt->bindParam(':categoryId', $this->categoryId);
       $stmt->bindParam(':createdAt', $this->createdAt);
-      $stmt->bindParam(':lastUpdated', $this->lastUpdated);
+      $stmt->bindParam(':updatedAt', $this->updatedAt);
       $stmt->bindParam(':id', $this->id);
 
       return $stmt->execute() ? true : false;

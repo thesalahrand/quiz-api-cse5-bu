@@ -13,13 +13,15 @@
 
   $validation = $validator->make($_POST, [
     'title' => 'required|max:50',
-    'categoryPic' => 'uploaded_file:0,500K,png,jpeg'
+    'topicPic' => 'uploaded_file:0,500K,png,jpeg',
+    'categoryId' => 'required'
   ]);
   
   $validation->setMessages([
     'title:required' => 'Title is required',
     'title:max' => 'Title should not exceed 50 characters',
-    'categoryPic:uploaded_file' => 'Category picture should be jpeg/png and not exceed 500 KB'
+    'topicPic:uploaded_file' => 'Topic picture should be jpeg/png and not exceed 500 KB',
+    'categoryId:required' => 'Category is required'
   ]);
 
   $validation->validate();
@@ -30,11 +32,20 @@
     exit();
   }
 
-  $categories->title = $_POST['title'];
+  $categories->id = $_POST['categoryId'];
 
-  if($categories->readByTitle()->rowCount()) {
+  if(!$categories->readById()->rowCount()) {
     http_response_code(400);
-    echo json_encode(['message' => 'Title already exists']);
+    echo json_encode(['message' => 'Category not found']);
+    exit();
+  }
+
+  $topics->title = $_POST['title'];
+  $topics->categoryId = $_POST['categoryId'];
+
+  if($topics->readByTitleCategoryId()->rowCount()) {
+    http_response_code(400);
+    echo json_encode(['message' => 'Title already exists under this category']);
     exit();
   }
 ?>
