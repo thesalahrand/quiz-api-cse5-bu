@@ -40,7 +40,8 @@
       exit();
     } else {
       if($users->profilePic) {
-        unlink(__DIR__ . '/../' . $users->profilePic);
+        $oldProfilePicLoc = __DIR__ . '/../' . $users->profilePic; 
+        file_exists($oldProfilePicLoc) && unlink($oldProfilePicLoc);
       }
       $users->profilePic = $res;
     }

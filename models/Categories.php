@@ -63,14 +63,13 @@
     }
 
     public function update() {
-      $query = "UPDATE `$this->tableName` SET `title` = :title, `categoryPic` = :categoryPic, `createdAt` = :createdAt, `lastUpdated` = :lastUpdated WHERE `id` = :id;";
+      $query = "UPDATE `$this->tableName` SET `title` = :title, `categoryPic` = :categoryPic, `updatedAt` = :updatedAt WHERE `id` = :id;";
 
       $stmt = $this->conn->prepare($query);
 
       $stmt->bindParam(':title', $this->title);
       $stmt->bindParam(':categoryPic', $this->categoryPic);
-      $stmt->bindParam(':createdAt', $this->createdAt);
-      $stmt->bindParam(':lastUpdated', $this->lastUpdated);
+      $stmt->bindParam(':updatedAt', $this->updatedAt);
       $stmt->bindParam(':id', $this->id);
 
       return $stmt->execute() ? true : false;

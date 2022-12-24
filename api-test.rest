@@ -181,10 +181,43 @@ Content-Type: {{contentType}} boundary=----create-category
 ------create-category
 Content-Disposition: form-data; name="title"
 
-Chemistry
+Organic Chemistry
 ------create-category
 Content-Disposition: form-data; name="categoryPic"; filename="chemistry.png"
 Content-Type: image/png
 
 < ./api-test-pic/chemistry.png
 ------create-category--
+
+### Update Category
+
+POST {{$dotenv ROOT_DIR}}/api/update-category.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----update-category
+
+------update-category
+Content-Disposition: form-data; name="id"
+
+13
+------update-category
+Content-Disposition: form-data; name="title"
+
+Atomic Chemistry
+------update-category
+Content-Disposition: form-data; name="categoryPic"; filename="chemistry.png"
+Content-Type: image/png
+
+< ./api-test-pic/chemistry.png
+------update-category--
+
+### Delete Category
+
+POST {{$dotenv ROOT_DIR}}/api/delete-category.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----delete-category
+
+------delete-category
+Content-Disposition: form-data; name="id"
+
+13
+------delete-category--

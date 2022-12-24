@@ -26,7 +26,7 @@
     'password:min' => 'Password must contain at least 8 characters',
     'password:max' => 'Password may contain at most 20 characters',
     'password:regex' => 'Password should contain only English alphabets and digits',
-    'profilePic:uploaded_file' => 'Profile pic should be jpeg/png and not exceed 500 KB'
+    'profilePic:uploaded_file' => 'Profile picture should be jpeg/png and not exceed 500 KB'
   ]);
 
   $validation->validate();
