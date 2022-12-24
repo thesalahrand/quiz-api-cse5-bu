@@ -8,11 +8,11 @@ Content-Type: {{contentType}} boundary=----register
 ------register
 Content-Disposition: form-data; name="phone"
 
-+8801943253440
++8801687260070
 ------register
 Content-Disposition: form-data; name="password"
 
-12345678
+87654321
 ------register--
 
 ### Login
@@ -135,3 +135,32 @@ POST {{$dotenv ROOT_DIR}}/api/read-scores.php
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIn0.PZStAskQ4G3Q0uKHUmxwb81xVhOk3rLPJzy4sJtzw0M
 Content-Type: {{contentType}} boundary=----read-scores
 ------read-scores--
+
+### Update User
+
+POST {{$dotenv ROOT_DIR}}/api/update-user.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----update-user
+
+------update-user
+Content-Disposition: form-data; name="firstName"
+
+Ben 
+------update-user
+Content-Disposition: form-data; name="lastName"
+
+Stokes
+------update-user
+Content-Disposition: form-data; name="phone"
+
++8801943253440
+------update-user
+Content-Disposition: form-data; name="password"
+
+87654321
+------update-user
+Content-Disposition: form-data; name="profilePic"; filename="1.png"
+Content-Type: image/png
+
+< ./1.png
+------update-user--

@@ -66,7 +66,7 @@
     }
 
     public function update() {
-      $query = "UPDATE `$this->tableName` SET `firstName` = :firstName, `lastName` = :lastName, `phone` = :phone, `password` = :password, `profilePic` = :profilePic, `createdAt` = :createdAt, `lastUpdated` = :lastUpdated WHERE `id` = :id;";
+      $query = "UPDATE `$this->tableName` SET `firstName` = :firstName, `lastName` = :lastName, `phone` = :phone, `password` = :password, `profilePic` = :profilePic, `updatedAt` = :updatedAt WHERE `id` = :id;";
 
       $stmt = $this->conn->prepare($query);
 
@@ -75,8 +75,7 @@
       $stmt->bindParam(':phone', $this->phone);
       $stmt->bindParam(':password', $this->password);
       $stmt->bindParam(':profilePic', $this->profilePic);
-      $stmt->bindParam(':createdAt', $this->createdAt);
-      $stmt->bindParam(':lastUpdated', $this->lastUpdated);
+      $stmt->bindParam(':updatedAt', $this->updatedAt);
       $stmt->bindParam(':id', $this->id);
 
       return $stmt->execute() ? true : false;
