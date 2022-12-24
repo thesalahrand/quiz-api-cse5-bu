@@ -38,7 +38,7 @@
     }
 
     public function readByTitle() {
-      $query = "SELECT * FROM `$this->tableName` WHERE `title` = :title;";
+      $query = "SELECT * FROM `$this->tableName` WHERE lower(`title`) = lower(:title)";
 
       $stmt = $this->conn->prepare($query);
 

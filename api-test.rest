@@ -145,11 +145,11 @@ Content-Type: {{contentType}} boundary=----update-user
 ------update-user
 Content-Disposition: form-data; name="firstName"
 
-Ben 
+John 
 ------update-user
 Content-Disposition: form-data; name="lastName"
 
-Stokes
+Doe
 ------update-user
 Content-Disposition: form-data; name="phone"
 
@@ -159,10 +159,10 @@ Content-Disposition: form-data; name="password"
 
 87654321
 ------update-user
-Content-Disposition: form-data; name="profilePic"; filename="1.png"
+Content-Disposition: form-data; name="profilePic"; filename="john-doe.png"
 Content-Type: image/png
 
-< ./1.png
+< ./api-test-pic/john-doe.png
 ------update-user--
 
 ### Read Users
@@ -171,3 +171,20 @@ POST {{$dotenv ROOT_DIR}}/api/read-users.php
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-users
 ------read-users--
+
+### Create Category
+
+POST {{$dotenv ROOT_DIR}}/api/create-category.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----create-category
+
+------create-category
+Content-Disposition: form-data; name="title"
+
+Chemistry
+------create-category
+Content-Disposition: form-data; name="categoryPic"; filename="chemistry.png"
+Content-Type: image/png
+
+< ./api-test-pic/chemistry.png
+------create-category--
