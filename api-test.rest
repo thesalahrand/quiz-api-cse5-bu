@@ -1,6 +1,6 @@
 @contentType = multipart/form-data;
 
-### Register
+### 01. Register
 
 POST {{$dotenv ROOT_DIR}}/api/register.php 
 Content-Type: {{contentType}} boundary=----register
@@ -15,7 +15,7 @@ Content-Disposition: form-data; name="password"
 12345678
 ------register--
 
-### Login
+### 02. Login
 
 POST {{$dotenv ROOT_DIR}}/api/login.php 
 Content-Type: {{contentType}} boundary=----login
@@ -23,31 +23,31 @@ Content-Type: {{contentType}} boundary=----login
 ------login
 Content-Disposition: form-data; name="phone"
 
-+8801303458829
++8801943253440
 ------login
 Content-Disposition: form-data; name="password"
 
-12345678
+87654321
 ------login--
 
-### Is Logged In
+### 03. Is Logged In
 
 POST {{$dotenv ROOT_DIR}}/api/is-logged-in.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----is-logged-in
 ------is-logged-in--
 
-### Read Categories
+### 04. Read Categories
 
 POST {{$dotenv ROOT_DIR}}/api/read-categories.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-categories
 ------read-categories--
 
-### Read Category by Id
+### 05. Read Category by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-category-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-category-by-id
 
 ------read-category-by-id
@@ -56,10 +56,10 @@ Content-Disposition: form-data; name="id"
 1
 ------read-category-by-id--
 
-### Read Topics by Category Id
+### 06. Read Topics by Category Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topics-by-category-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-topics-by-category-id
 
 ------read-topics-by-category-id
@@ -68,10 +68,10 @@ Content-Disposition: form-data; name="categoryId"
 1
 ------read-topics-by-category-id--
 
-### Read Topic by Id
+### 07. Read Topic by Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-topic-by-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-topic-by-id
 
 ------read-topic-by-id
@@ -80,10 +80,10 @@ Content-Disposition: form-data; name="id"
 8
 ------read-topic-by-id--
 
-### Read Quiz by Topic Id
+### 08. Read Quiz by Topic Id
 
 POST {{$dotenv ROOT_DIR}}/api/read-quiz-by-topic-id.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-quiz-by-topic-id
 
 ------read-quiz-by-topic-id
@@ -92,10 +92,10 @@ Content-Disposition: form-data; name="topicId"
 8
 ------read-quiz-by-topic-id--
 
-### Create Score
+### 09. Create Score
 
 POST {{$dotenv ROOT_DIR}}/api/create-score.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----create-score
 
 ------create-score
@@ -129,17 +129,17 @@ Content-Disposition: form-data; name="answers"
 ]
 ------create-score--
 
-### Read Scores
+### 10. Read Scores
 
 POST {{$dotenv ROOT_DIR}}/api/read-scores.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-scores
 ------read-scores--
 
-### Update User
+### 11. Update User
 
 POST {{$dotenv ROOT_DIR}}/api/update-user.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----update-user
 
 ------update-user
@@ -165,17 +165,17 @@ Content-Type: image/png
 < ./api-test-pic/john-doe.png
 ------update-user--
 
-### Read Users
+### 12. Read Users
 
 POST {{$dotenv ROOT_DIR}}/api/read-users.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----read-users
 ------read-users--
 
-### Create Category
+### 13. Create Category
 
 POST {{$dotenv ROOT_DIR}}/api/create-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----create-category
 
 ------create-category
@@ -189,16 +189,16 @@ Content-Type: image/png
 < ./api-test-pic/chemistry.png
 ------create-category--
 
-### Update Category
+### 14. Update Category
 
 POST {{$dotenv ROOT_DIR}}/api/update-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----update-category
 
 ------update-category
 Content-Disposition: form-data; name="id"
 
-9
+10
 ------update-category
 Content-Disposition: form-data; name="title"
 
@@ -210,22 +210,22 @@ Content-Type: image/png
 < ./api-test-pic/chemistry.png
 ------update-category--
 
-### Delete Category
+### 15. Delete Category
 
 POST {{$dotenv ROOT_DIR}}/api/delete-category.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----delete-category
 
 ------delete-category
 Content-Disposition: form-data; name="id"
 
-9
+10
 ------delete-category--
 
-### Create Topic
+### 16. Create Topic
 
 POST {{$dotenv ROOT_DIR}}/api/create-topic.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----create-topic
 
 ------create-topic
@@ -243,20 +243,20 @@ Content-Type: image/png
 < ./api-test-pic/theory-of-computation.png
 ------create-topic--
 
-### Update Topic
+### 17. Update Topic
 
 POST {{$dotenv ROOT_DIR}}/api/update-topic.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----update-topic
 
 ------update-topic
 Content-Disposition: form-data; name="id"
 
-16
+14
 ------update-topic
 Content-Disposition: form-data; name="title"
 
-Theory of Computation
+Theory of Computation --
 ------update-topic
 Content-Disposition: form-data; name="categoryId"
 
@@ -268,22 +268,22 @@ Content-Type: image/png
 < ./api-test-pic/theory-of-computation.png
 ------update-topic--
 
-### Delete Topic
+### 18. Delete Topic
 
 POST {{$dotenv ROOT_DIR}}/api/delete-topic.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----delete-topic
 
 ------delete-topic
 Content-Disposition: form-data; name="id"
 
-17
+14
 ------delete-topic--
 
-### Create Quiz
+### 19. Create Quiz
 
 POST {{$dotenv ROOT_DIR}}/api/create-quiz.php 
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
 Content-Type: {{contentType}} boundary=----create-quiz
 
 ------create-quiz
@@ -303,3 +303,43 @@ Content-Disposition: form-data; name="topicId"
 
 8
 ------create-quiz--
+
+### 20. Update Quiz
+
+POST {{$dotenv ROOT_DIR}}/api/update-quiz.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----update-quiz
+
+------update-quiz
+Content-Disposition: form-data; name="id"
+
+11
+------update-quiz
+Content-Disposition: form-data; name="question"
+
+Rational agent always does the right things.
+------update-quiz
+Content-Disposition: form-data; name="options"
+
+["True", "Others", "False"]
+------update-quiz
+Content-Disposition: form-data; name="correctOptions"
+
+["0", "2"]
+------update-quiz
+Content-Disposition: form-data; name="topicId"
+
+8
+------update-quiz--
+
+### 21. Delete Quiz
+
+POST {{$dotenv ROOT_DIR}}/api/delete-quiz.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE0In0.YWg7HKO7N66iGcCYskTvdxt-0I85z0tkkxP76qTol3U
+Content-Type: {{contentType}} boundary=----delete-quiz
+
+------delete-quiz
+Content-Disposition: form-data; name="id"
+
+11
+------delete-quiz--

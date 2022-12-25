@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 02:00 PM
+-- Generation Time: Dec 25, 2022 at 07:36 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -47,7 +47,7 @@ INSERT INTO `categories` (`id`, `title`, `categoryPic`, `createdAt`, `updatedAt`
 (5, 'Literature', 'uploads/categories/literature.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
 (6, 'History', 'uploads/categories/history.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
 (7, 'Physics', 'uploads/categories/physics.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44'),
-(8, 'Chemistry', 'uploads/categories/chemistry.png', '2022-12-21 05:56:44', '2022-12-21 05:56:44');
+(12, 'Chemistry', 'uploads/categories/e4ddf97f45ea9a564911.png', '2022-12-24 13:08:47', '2022-12-24 14:28:32');
 
 -- --------------------------------------------------------
 
@@ -62,19 +62,19 @@ CREATE TABLE `quiz` (
   `correctOptions` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`correctOptions`)),
   `topicId` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
-  `lastUpdated` timestamp NOT NULL DEFAULT current_timestamp()
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`id`, `question`, `options`, `correctOptions`, `topicId`, `createdAt`, `lastUpdated`) VALUES
+INSERT INTO `quiz` (`id`, `question`, `options`, `correctOptions`, `topicId`, `createdAt`, `updatedAt`) VALUES
 (1, 'A technique that was developed to determine whether a machine could or could not demonstrate the artificial intelligence known as the___', '[\"Boolean Algebra\", \"Turing Test\", \"Logarithm\", \"Algorithm\"]', '[1]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
 (2, 'Which algorithm is used in the Game tree to make decisions of Win/Lose?', '[\"Heuristic Search Algorithm\", \"DFS/BFS algorithm\", \"Greedy Search Algorithm\", \"Min/Max algorithm\"]', '[3]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
 (3, 'An AI agent perceives and acts upon the environment using___', '[\"Sensors\", \"Perceiver\", \"Actuators\"]', '[0, 2]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
-(4, 'Rational agent always does the right things.', '[\"True\", \"False\"]', '[0]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
-(5, 'An Algorithm is said as Complete algorithm if_______________', '[\"It ends with a solution (if any exists)\", \"It begins with a solution\", \"It does not end with a solution\", \"It contains a loop\"]', '[0]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05');
+(5, 'An Algorithm is said as Complete algorithm if_______________', '[\"It ends with a solution (if any exists)\", \"It begins with a solution\", \"It does not end with a solution\", \"It contains a loop\"]', '[0]', 8, '2022-12-21 11:03:05', '2022-12-21 11:03:05'),
+(9, 'Rational agent always does the right things.', '[\"True\", \"False\"]', '[0]', 8, '2022-12-25 06:31:30', '2022-12-25 06:31:30');
 
 -- --------------------------------------------------------
 
@@ -89,16 +89,6 @@ CREATE TABLE `scores` (
   `userId` int(11) NOT NULL,
   `playedAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `scores`
---
-
-INSERT INTO `scores` (`id`, `questionsCnt`, `correctAnsCnt`, `userId`, `playedAt`) VALUES
-(3, 5, 2, 12, '2022-12-22 12:58:24'),
-(4, 5, 3, 12, '2022-12-22 12:58:38'),
-(5, 5, 4, 12, '2022-12-22 12:58:59'),
-(7, 5, 5, 12, '2022-12-22 12:59:35');
 
 -- --------------------------------------------------------
 
@@ -125,7 +115,7 @@ INSERT INTO `topics` (`id`, `title`, `topicPic`, `categoryId`, `createdAt`, `upd
 (10, 'C Programming Language', 'uploads/topics/c-programming-language-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
 (11, 'Machine Learning', 'uploads/topics/machine-learning-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
 (12, 'Peripheral and Interfacing', 'uploads/topics/peripheral-and-interfacing-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32'),
-(13, 'Theory of Computation', 'uploads/topics/theory-of-computation-1.png', 1, '2022-12-21 08:26:32', '2022-12-21 08:26:32');
+(16, 'Theory of Computation', 'uploads/topics/eb8851bf6891bb412cf8.png', 1, '2022-12-24 17:13:53', '2022-12-24 17:13:53');
 
 -- --------------------------------------------------------
 
@@ -149,7 +139,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `phone`, `password`, `profilePic`, `createdAt`, `updatedAt`) VALUES
-(12, NULL, NULL, '+8801943253440', '$2y$10$B3CGvVfoOR6gVNyKV3oxE.4RsHzbbWek1I092LtfxyCwQncRsWcq.', NULL, '2022-12-21 05:41:45', '2022-12-21 05:41:45');
+(14, 'John', 'Doe', '+8801943253440', '$2y$10$fNgqLfmW.94XCjTI.71cn.3rWGyNL5cHLyKa3mbV0NcmBSNONqXK2', 'uploads/users/4ac786b2e784212ceda1.png', '2022-12-24 09:09:21', '2022-12-24 12:54:39'),
+(15, NULL, NULL, '+8801687260070', '$2y$10$B7ke8W9wwIlnPDazA8c/uuDqFxmQuUQt1cXXBJdqsPXjRaJ63B8WG', NULL, '2022-12-24 09:09:36', '2022-12-24 09:09:36');
 
 --
 -- Indexes for dumped tables
@@ -181,7 +172,6 @@ ALTER TABLE `scores`
 --
 ALTER TABLE `topics`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `title` (`title`),
   ADD KEY `categoryId` (`categoryId`);
 
 --
@@ -199,13 +189,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `scores`
@@ -217,13 +207,13 @@ ALTER TABLE `scores`
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
