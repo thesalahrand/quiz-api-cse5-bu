@@ -31,7 +31,7 @@
   $categories->updatedAt = date('Y-m-d H:i:s', time());
 
   if(isset($_FILES['categoryPic'])) {
-    $res = Config::uploadFile($_FILES['categoryPic'], Config::$CATEGORY_PIC_UPLOAD_DIR);
+    $res = Config::uploadFile($_FILES['categoryPic'], Config::CATEGORY_PIC_UPLOAD_DIR);
 
     if(!$res) {
       http_response_code(500);

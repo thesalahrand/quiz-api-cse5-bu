@@ -279,3 +279,27 @@ Content-Disposition: form-data; name="id"
 
 17
 ------delete-topic--
+
+### Create Quiz
+
+POST {{$dotenv ROOT_DIR}}/api/create-quiz.php 
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1In0.p3ypDeQ-Fn1cje6C93Wbp1lDDodmsUDRUN7q7ei7Hyw
+Content-Type: {{contentType}} boundary=----create-quiz
+
+------create-quiz
+Content-Disposition: form-data; name="question"
+
+Rational agent always does the right things.
+------create-quiz
+Content-Disposition: form-data; name="options"
+
+["True", "False"]
+------create-quiz
+Content-Disposition: form-data; name="correctOptions"
+
+["0"]
+------create-quiz
+Content-Disposition: form-data; name="topicId"
+
+8
+------create-quiz--

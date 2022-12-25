@@ -32,7 +32,7 @@
   $users->updatedAt = date('Y-m-d H:i:s', time());
 
   if(isset($_FILES['profilePic'])) {
-    $res = Config::uploadFile($_FILES['profilePic'], Config::$PROFILE_PIC_UPLOAD_DIR);
+    $res = Config::uploadFile($_FILES['profilePic'], Config::PROFILE_PIC_UPLOAD_DIR);
 
     if(!$res) {
       http_response_code(500);

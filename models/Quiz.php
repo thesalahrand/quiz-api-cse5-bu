@@ -14,7 +14,7 @@
     public $updatedAt;
 
     public function __construct($db) {
-      $this->conn = $db;
+      $this->conn = $db; 
     }
 
     public function read() {
@@ -67,7 +67,7 @@
     }
 
     public function update() {
-      $query = "UPDATE `$this->tableName` SET `question` = :question, `options` = :options, `correctOptions` = :correctOptions, `topicId` = :topicId, `createdAt` = :createdAt, `lastUpdated` = :lastUpdated WHERE `id` = :id;";
+      $query = "UPDATE `$this->tableName` SET `question` = :question, `options` = :options, `correctOptions` = :correctOptions, `topicId` = :topicId, `createdAt` = :createdAt, `updatedAt` = :updatedAt WHERE `id` = :id;";
 
       $stmt = $this->conn->prepare($query);
 
@@ -76,7 +76,7 @@
       $stmt->bindParam(':correctOptions', $this->correctOptions);
       $stmt->bindParam(':topicId', $this->topicId);
       $stmt->bindParam(':createdAt', $this->createdAt);
-      $stmt->bindParam(':lastUpdated', $this->lastUpdated);
+      $stmt->bindParam(':updatedAt', $this->updatedAt);
       $stmt->bindParam(':id', $this->id);
 
       return $stmt->execute() ? true : false;

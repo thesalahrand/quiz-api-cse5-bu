@@ -3,15 +3,15 @@
 
   class Config {
     public static $ROOT_DIR;
-    public static $TIMEZONE = 'Asia/Dhaka';
-    public static $PROFILE_PIC_UPLOAD_DIR = 'uploads/users/';
-    public static $CATEGORY_PIC_UPLOAD_DIR = 'uploads/categories/';
-    public static $TOPIC_PIC_UPLOAD_DIR = 'uploads/topics/';
+    public const TIMEZONE = 'Asia/Dhaka';
+    public const PROFILE_PIC_UPLOAD_DIR = 'uploads/users/';
+    public const CATEGORY_PIC_UPLOAD_DIR = 'uploads/categories/';
+    public const TOPIC_PIC_UPLOAD_DIR = 'uploads/topics/';
 
     public function __construct() {
       self::$ROOT_DIR = $_ENV['ROOT_DIR'];
 
-      date_default_timezone_set(self::$TIMEZONE);
+      date_default_timezone_set(self::TIMEZONE);
     }
 
     public static function uploadFile($file, $uploadDir) {

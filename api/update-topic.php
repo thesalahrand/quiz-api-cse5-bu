@@ -32,7 +32,7 @@
   $topics->updatedAt = date('Y-m-d H:i:s', time());
 
   if(isset($_FILES['topicPic'])) {
-    $res = Config::uploadFile($_FILES['topicPic'], Config::$TOPIC_PIC_UPLOAD_DIR);
+    $res = Config::uploadFile($_FILES['topicPic'], Config::TOPIC_PIC_UPLOAD_DIR);
 
     if(!$res) {
       http_response_code(500);
